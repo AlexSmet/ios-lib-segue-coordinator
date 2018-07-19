@@ -21,7 +21,7 @@ fileprivate let swizzling: () = {
     let originalMethod = class_getInstanceMethod(UIViewController.self, originalSelector)
     let swizzledMethod = class_getInstanceMethod(UIViewController.self, swizzledSelector)
     
-    method_exchangeImplementations(originalMethod, swizzledMethod)
+    method_exchangeImplementations(originalMethod!, swizzledMethod!)
 }()
 
 extension UIViewController {
@@ -41,7 +41,7 @@ extension UIViewController {
     }
     
     //Пробрасываем prepareForSegue в координатор
-    func swizzled_prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @objc func swizzled_prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.swizzled_prepare(for: segue, sender: sender)
         __segueCoordinator?.prepareForSegue(segue, sender: sender)
     }
