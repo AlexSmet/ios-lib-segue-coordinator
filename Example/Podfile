@@ -1,11 +1,12 @@
 use_frameworks!
+platform :ios, '9.0'
 
-target 'SegueCoordinator_Example' do
+target 'SegueCoordinatorExample' do
   pod 'SegueCoordinator', :path => '../'
+  
+end
 
-  target 'SegueCoordinator_Tests' do
-    inherit! :search_paths
+target 'SegueCoordinatorTests' do
+    pod 'SegueCoordinator', :path => '../'
 
-    
-  end
 end

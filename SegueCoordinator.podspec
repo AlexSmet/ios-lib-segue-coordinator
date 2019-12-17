@@ -8,35 +8,20 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SegueCoordinator'
-  s.version          = '0.6.0'
-  s.summary          = 'A short description of SegueCoordinator.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.platform         = :ios
+  s.ios.deployment_target = '9.0'
+  s.version          = '0.9.1'
+  s.summary          = 'Create separate classes that will handle navigation instead of view controllers'
+  s.homepage         = 'https://github.com/npu3pak/ios-lib-segue-coordinator'
+  s.documentation_url = 'https://npu3pak.github.io/ios-lib-segue-coordinator'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Evgeniy Safronov' => 'evsafronov.personal@yandex.ru' }
+  s.source           = { :git => 'https://github.com/npu3pak/ios-lib-segue-coordinator.git', :tag => s.version.to_s }
+  s.swift_version = '5.0'
+  s.source_files = 'SegueCoordinator/Classes/**/*'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Alternative to Application Coordinator pattern. Create separate classes that will handle navigation instead of view controllers.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SegueCoordinator'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Евгений Сафронов' => 'evsafronov.personal@yandex.ru' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SegueCoordinator.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'SegueCoordinator/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SegueCoordinator' => ['SegueCoordinator/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
