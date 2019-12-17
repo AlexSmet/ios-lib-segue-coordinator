@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "SegueCoordinator",
             dependencies: [],
-            path: "SegueCoordinator/Classes"),
+            path: "SegueCoordinator/Classes/*.swift"),
         .testTarget(
             name: "SegueCoordinatorTests",
             dependencies: ["SegueCoordinator"]),
